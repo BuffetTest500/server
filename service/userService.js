@@ -26,7 +26,6 @@ exports.create = async userInfo => {
 
     return user;
   } catch (error) {
-
     throw error;
   }
 };
