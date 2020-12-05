@@ -7,7 +7,18 @@ const db = {};
 
 const sequelize = new Sequelize(config.database, config.username, config.password, config);
 
-db.User = require('./user')(sequelize, Sequelize);
+db.User = require('./User')(sequelize, Sequelize);
+db.PreferenceInfo = require('./PreferenceInfo')(sequelize, Sequelize);
+
+db.User.hasOne(db.PreferenceInfo, {
+  onDelete: 'cascade',
+});
+
+db.PreferenceInfo.belongsTo(db.User, {
+  foreignKey: {
+    allowNull: true,
+  }
+});
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;

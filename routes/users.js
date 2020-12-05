@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const PATHS = require('../constants/paths');
+const { createPreferenceInfo, updatePreferenceInfo } = require('../controllers/preferenceInfo.controller');
+const { updateUserInfo } = require('../controllers/user.controller');
 
-router.get(PATHS.ROOT, (req, res, next) => {
-  res.send('respond with a resource');
-});
+
+router.post('/:user_id/preference_info', createPreferenceInfo);
+router.put('/:user_id/preference_info', updatePreferenceInfo);
+router.put('/:user_id', updateUserInfo);
 
 module.exports = router;
