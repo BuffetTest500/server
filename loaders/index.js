@@ -6,7 +6,7 @@ const shell = require('shelljs');
 
 const initLoaders = app => {
   app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'www.warrenbuffetttest500.site',
     credentials: true,
   }));
   app.use(logger('dev'));
