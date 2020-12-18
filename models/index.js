@@ -7,7 +7,7 @@ const db = {};
 
 const sequelize = new Sequelize(config.database, config.username, config.password, config);
 
-db.User = require('./User')(sequelize, Sequelize);
+db.User = require('./user')(sequelize, Sequelize);
 db.PreferenceInfo = require('./PreferenceInfo')(sequelize, Sequelize);
 db.CompanyProfile = require('./CompanyProfile')(sequelize, Sequelize);
 db.PortfolioItem = require('./PortfolioItem')(sequelize, Sequelize);
