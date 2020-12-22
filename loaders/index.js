@@ -6,7 +6,9 @@ const shell = require('shelljs');
 
 const initLoaders = app => {
   app.use(cors({
-    origin: 'www.warrenbuffetttest500.site',
+    origin: process.env.ORIGIN_URI_PROD,
+    optionsSuccessStatus: 200,
+    allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
   }));
   app.use(logger('dev'));
