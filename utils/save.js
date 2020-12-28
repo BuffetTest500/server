@@ -42,3 +42,5 @@ const save = async () => {
     console.error(error);
   }
 };
+
+save();
