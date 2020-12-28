@@ -5,8 +5,14 @@ const cron = require('node-cron');
 const shell = require('shelljs');
 
 const initLoaders = app => {
+  app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+  });
   app.use(cors({
-    origin: 'www.warrenbuffetttest500.site',
+    origin: process.env.ORIGIN_URI_PROD,
+    optionsSuccessStatus: 200,
+    allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
   }));
   app.use(logger('dev'));
