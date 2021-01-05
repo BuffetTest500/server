@@ -9,12 +9,7 @@ const initLoaders = app => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
   });
-  app.use(cors({
-    origin: process.env.ORIGIN_URI_PROD,
-    optionsSuccessStatus: 200,
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
-  }));
+  app.use(cors());
   app.use(logger('dev'));
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
