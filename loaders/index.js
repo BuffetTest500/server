@@ -5,7 +5,9 @@ const cron = require('node-cron');
 const shell = require('shelljs');
 
 const initLoaders = app => {
-  app.use(cors());
+  app.use(cors({
+    credentials: true,
+  }));
   app.use(logger('dev'));
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
