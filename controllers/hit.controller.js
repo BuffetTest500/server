@@ -6,7 +6,7 @@ exports.createHit = async (req, res, next) => {
   const { symbol } = req.params;
   const { buffettTest500: userByCookie } = req.cookies;
 
-  console.log('cookies',req);
+  console.log('cookies', req);
   try {
     const pastHit = await hitService.getPast(symbol, userByCookie);
 
