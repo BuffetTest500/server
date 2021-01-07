@@ -5,10 +5,10 @@ const cron = require('node-cron');
 const shell = require('shelljs');
 
 const initLoaders = app => {
-  // app.use(function (req, res, next) {
-  //   res.setHeader('Access-Control-Allow-Origin', '*');
-  //   next();
-  // });
+  app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+  });
   app.use(cors());
   app.use(logger('dev'));
   app.use(express.json());
