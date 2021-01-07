@@ -6,14 +6,9 @@ const shell = require('shelljs');
 const env = process.env;
 
 const initLoaders = app => {
-  app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    next();
-  });
   app.use(cors({
     origin: env.ORIGIN_URI_PROD,
     credentials: true,
-    
   }));
   app.use(logger('dev'));
   app.use(express.json());
