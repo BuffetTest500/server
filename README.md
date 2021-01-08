@@ -2,10 +2,10 @@
 
 ## Table Contents
 - Introduction
+- Deploy
 - Features
 - Tech Stack
 - Installation
-- Deploy
 - Project Process
 - Version Control
 - Things to do
@@ -13,6 +13,11 @@ ___
 ## Introduction
 ![시뮬레이터 gif](https://user-images.githubusercontent.com/62005112/103144242-50f05d00-4769-11eb-82ab-ed263528af98.gif)
 ### 보유 주식을 등록하면 성향에 맞추어 다른 사람의 포트폴리오와 투자할 만한 회사를 추천해주고 시각화해주는 주식 포트폴리오 웹서비스입니다.
+___
+## Deploy
+- 배포주소 https://www.warrenbuffetttest500.site/
+- Client : Netlify
+- Server : AWS Elastic Beanstalk & AWS Code Pipeline for Deployment automation
 ___
 ## Features
 - 보유 주식을 등록 하면 실시간 가격과 비교해 수익, 수익률을 분석해주고 차트로 시각화해서 보여줍니다.
@@ -80,10 +85,6 @@ node .\utils\save.js
 **Root 디렉토리에 .env파일을 생성 후 .env.sample 파일 형식에 맞춰 환경변수 값을 입력합니다.**
 - [MySQL](https://www.mysql.com/)
 - [sequelize](https://sequelize.org/)
-___
-## Deploy
-- Client : Netlify
-- Server : AWS Elastic Beanstalk & AWS Code Pipeline for Deployment automation
 ___
 ## Project Process
   ### 1주차
