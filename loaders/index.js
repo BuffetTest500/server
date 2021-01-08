@@ -7,7 +7,7 @@ const env = process.env;
 
 const initLoaders = app => {
   app.use(cors({
-    origin: 'https://www.warrenbuffetttest500.site/',
+    origin: 'https://www.warrenbuffetttest500.site',
     credentials: true,
   }));
   app.use(logger('dev'));
